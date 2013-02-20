@@ -32,7 +32,12 @@ def read_config(fname):
         t = string.strip(t)
 
         if t:
+        #ignore '#' started line
+            t=buf[i]
+            t = string.strip(t)
+            #we think this line not start with '#',so re_prase the line
             if t[0] == '[' and t[-1] == ']':
+            #column line
                 section_name = string.strip(t[1:-1])
                 if section_name:
                     res[section_name] = {}
