@@ -46,6 +46,9 @@ class AuthProxyServer:
             self.config['NTLM_AUTH']['USER'] = 'placeholder_username'
             self.config['NTLM_AUTH']['PASSWORD'] = 'placeholder_password'
         # hashed passwords calculation
+        if self.config['DEBUG']['DEBUG']:
+            print ("user:%s") % self.config['NTLM_AUTH']['USER']
+            print ("passwd:%s") % self.config['NTLM_AUTH']['PASSWORD']
         self.config['NTLM_AUTH']['LM_HASHED_PW'] = ntlm_procs.create_LM_hashed_password(self.config['NTLM_AUTH']['PASSWORD'])
         self.config['NTLM_AUTH']['NT_HASHED_PW'] = ntlm_procs.create_NT_hashed_password(self.config['NTLM_AUTH']['PASSWORD'])
 
