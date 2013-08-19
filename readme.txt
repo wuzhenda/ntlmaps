@@ -119,3 +119,9 @@ because it looks like that the server it contains is going down.
 md4.py and des_c.py had been translated from md4.c and des.c from
 "the Python Cryptography Toolkit, version 1.0.0 Copyright (C) 1995, A.M. Kuchling"
 
+##### {add by Henry.Wu(wu.publicmail@gmail.com) #################################
+change server.cfg_mode to server.cfg
+and modify server.cfg anyplace that have Henry there
+
+##### add by Henry.Wu(wu.publicmail@gmail.com) }#################################
+

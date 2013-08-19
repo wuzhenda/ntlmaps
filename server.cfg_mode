@@ -1,7 +1,7 @@
 #========================================================================
 [GENERAL]
-
-LISTEN_PORT:5865
+#Henry any place have Henry,need modify
+LISTEN_PORT:10000
 
 # If you want APS to authenticate you at WWW servers using NTLM then just leave this
 # value blank like PARENT_PROXY: and APS will connect to web servers directly.
@@ -9,8 +9,10 @@ LISTEN_PORT:5865
 # APS will detect when one fails and automatically fail-over to the next. EG:
 #PARENT_PROXY:first_proxy second_proxy third_proxy
 # And NOTE that NTLM cannot pass through another proxy server.
+#Henry
 PARENT_PROXY:
 
+#Henry
 PARENT_PROXY_PORT:
 
 # APS will poll the upstream proxy and attempt to fail-over to a new one if it doesn't
@@ -79,20 +81,24 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)
 #        then there is a chance that APS running on 'host2' with NT_HOSTNAME:host1 will
 #        be able to be granted access to the restricted resource. However use this on
 #        you own risk as such a trick may be considered as a hack or something.
+#Henry
 NT_HOSTNAME:
 
 # Windows Domain.
 # NOTE: it is not full qualified internet domain, but windows network domain.
+#Henry
 NT_DOMAIN:
 
 # What user's name to use during authorization. It may differ form real current username.
 # If you enable NTLM_TO_BASIC, below, you can either leave this blank or simply
 # hash it out.
+#Henry
 USER:
 
 # Password. Just leave it blank here and server will request it at the start time,
 # or, if you enable NTLM_TO_BASIC, below, you can either leave this blank or simply
 # hash it out, and you *won't* be prompted for a password at start time.
+#Henry
 PASSWORD:
 
 # These two options replace old FULL_NTLM option.
