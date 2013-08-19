@@ -18,6 +18,7 @@
 #
 
 import time
+import os, sys
 
 #-----------------------------------------------------------------------
 class Logger:
@@ -40,6 +41,6 @@ class Logger:
             # tstr = '(' + time.strftime('%H:%M:%S', time.localtime(time.time())) + ') '
             # time.clock()
 
-            fptr = open(self.log_name, 'a')
+            fptr = open(os.path.dirname(os.path.abspath(__file__))+"/../log/"+self.log_name, 'a')
             fptr.write(tstr + str)
             fptr.close()
